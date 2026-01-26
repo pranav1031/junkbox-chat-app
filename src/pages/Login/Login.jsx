@@ -8,7 +8,10 @@ const login = () => {
 
   return (
     <div className='login'>
-      <img src={assets.logo_big} alt="" className='logo' />
+      <div className='logo'>
+        <div className='logo-icon'></div>
+        <h1>Junkbox</h1>
+      </div>
       <form className='login-form'>
         <h2>{currState}</h2>
         {currState === "Sign up"?<input type="text" placeholder='username' className='form-input' required/>:null}

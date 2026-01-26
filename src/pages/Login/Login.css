@@ -1,64 +1,129 @@
-.login{
+.login {
   min-height: 100vh;
-  background: url(/background.png) no-repeat;
-  background-size: cover;
-  display:flex;
+  background: radial-gradient(circle at center, #1a1a1c 0%, #000000 100%);
+  display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  overflow: hidden;
 }
 
-.login .logo{
-  width: max(20vw,200px);
+.login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+  opacity: 0.03;
+  pointer-events: none;
 }
 
-.login-form{
-  background: white;
-  padding: 20px 30px;
+.login .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10;
+}
+
+.login .logo h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -1px;
+}
+
+.login .logo-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #0071e3 0%, #00c2ff 100%);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 113, 227, 0.4);
+}
+
+.login-form {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 40px 48px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  border-radius: 10px;
+  gap: 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
 }
 
-.login-form h2{
-  font-weight: 500;
+.login-form h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 8px;
+  text-align: center;
 }
 
-.form-input{
-  padding: 8px 10px;
-  border: 1px solid #c9c9c9;
-  border-radius: 4px;
-  outline-color: #077EFF;
-}
-
-.login-form button{
-  background-color: #077EFF;
-  color: white;
+.form-input {
+  padding: 14px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
   font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease;
+  outline: none;
 }
 
-.login-term{
+.form-input:focus {
+  background: #fff;
+  border-color: #0071e3;
+  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15);
+}
+
+.login-form button {
+  background-color: #0071e3;
+  color: white;
+  padding: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 10px;
+}
+
+.login-form button:hover {
+  background-color: #0077ed;
+  transform: translateY(-1px);
+}
+
+.login-form button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.login-term {
   display: flex;
   gap: 5px;
   font-size: 12px;
   color: #808080;
 }
 
-.login-forgot{
+.login-forgot {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.login-toggle{
+.login-toggle {
   font-size: 13px;
   color: #5c5c5c;
 }
 
-.login-toggle span{
+.login-toggle span {
   font-weight: 500;
   color: #077EFF;
   cursor: pointer;
