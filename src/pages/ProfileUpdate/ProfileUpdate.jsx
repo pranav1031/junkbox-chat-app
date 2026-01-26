@@ -21,7 +21,7 @@ const ProfileUpdate = () => {
         </form>
         <div className="profile-branding">
           <div className='logo-icon'></div>
-          <p>Junkbox</p>
+          <p>ChatIt</p>
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ const login = () => {
     <div className='login'>
       <div className='logo'>
         <div className='logo-icon'></div>
-        <h1>Junkbox</h1>
+        <h1>ChatIt</h1>
       </div>
       <form className='login-form'>
         <h2>{currState}</h2>

@@ -9,7 +9,7 @@ const LeftSideBar = () => {
         <div className='ls-nav'>
           <div className='logo-container'>
             <div className='logo-icon'></div>
-            <p>Junkbox</p>
+            <p>ChatIt</p>
           </div>
           <div className="menu">
             <img src={assets.menu_icon} alt="" />
