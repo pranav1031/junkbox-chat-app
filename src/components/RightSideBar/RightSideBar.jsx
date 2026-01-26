@@ -7,7 +7,7 @@ const RightSideBar = () => {
     <div className="rs">
       <div className="rs-profile">
         <img src={assets.profile_img} alt="" />
-        <h3>Richard Sanford <img src={assets.green_dot} className='dot' alt="" /></h3>
+        <h3>Richard Sanford <span className='dot'></span></h3>
         <p>Hey, I am Richard Sanford using chat app</p>
       </div>
       <hr />
